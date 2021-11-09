@@ -25,7 +25,7 @@ cf.limpiar_distrito(df)
 cf.traducir_causa(df)
 cf.calcular_turno(df)
 
-df.drop(['Codigo_Postal', 'Tipo_dia', 'Longitud', 'Latitud'], axis=1, inplace=True)
+df.drop(['Codigo_Postal', 'Tipo_dia'], axis=1, inplace=True)
 print('Se han quitado columnas que no se usarán posteriormente')
 
 df.Modelo.fillna('Desconocido',inplace = True)
