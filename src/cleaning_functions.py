@@ -365,8 +365,7 @@ def turno_segun_hora(hora):
         return 'Tarde'
 
 def calcular_turno(df) :
-    df['Turno_corregido'] = df.Turno
-    df['Turno_corregido'] = df['Hora'].map(lambda x:turno_segun_hora(x))
+    df.Turno = df['Hora'].map(lambda x:turno_segun_hora(x))
     print('Se han calculado los turnos según la hora')
     return df
     
